@@ -47,3 +47,4 @@ Desktop mode is single-user and shows installed bundles locally. Server mode fil
 ## Current Bundles
 
 - `xingyuan-monitor` - 星元枢算助手, a monitoring Agent Bundle that aggregates MaaS, DFCode MCP, and notification/reporting capabilities.
+- `maas-fleet-monitor-new` - Independent MaaS monitoring Agent Bundle with a Web-only read-only MaaS Skill, added without merging into the legacy `maas-fleet-monitor` Skill directory.

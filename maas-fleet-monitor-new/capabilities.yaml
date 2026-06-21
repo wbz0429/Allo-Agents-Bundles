@@ -1,0 +1,28 @@
+agent: maas-fleet-monitor-new
+display_name: MaaS Fleet Monitor New
+summary: Web-only MaaS monitoring Agent Bundle that installs a read-only MaaS public dashboard/API Skill without touching the legacy maas-fleet-monitor bundle.
+
+capabilities:
+  - id: maas-fleet-monitor-new
+    type: skill
+    label: MaaS Web Monitor New
+    required: true
+    role: observability
+    description: Query the MaaS public read-only Web dashboard/API for usage, health, model ranking, costs, and chart artifacts.
+
+policies:
+  response_style: monitor_card
+  read_only_by_default: true
+  maas_private_mcp_enabled: false
+  no_account_or_pool_mutation: true
+  runtime_loaded_files:
+    - config.yaml
+    - SOUL.md
+    - capabilities.yaml
+  design_only_files_runtime_loaded: false
+
+entry_prompts:
+  - 今天 MaaS 用量怎么样？
+  - 当前 MaaS 有没有风险？
+  - 今天哪个模型用得最多？
+  - 生成 MaaS 监控摘要和图表。

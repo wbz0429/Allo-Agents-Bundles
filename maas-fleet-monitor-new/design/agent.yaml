@@ -1,0 +1,36 @@
+status:
+  runtime_loaded: false
+  design_loaded: true
+  purpose: Design descriptor for the independent MaaS Fleet Monitor New Agent Bundle.
+
+agent:
+  id: maas-fleet-monitor-new
+  display_name: MaaS Fleet Monitor New
+  product_shape: allo_monitor_dashboard
+  primary_entry: desktop_dashboard
+  runtime_loaded_files:
+    - config.yaml
+    - SOUL.md
+    - capabilities.yaml
+
+boundaries:
+  orchestration_owner: agent_bundle
+  maas_data_owner: maas-fleet-monitor-new skill
+  read_only_by_default: true
+  no_private_mcp: true
+  no_ssh_tunnel: true
+  no_account_or_pool_mutation: true
+
+capability_model:
+  agent_bundle:
+    owns:
+      - identity
+      - system_prompt
+      - skill_composition
+      - output_style
+      - safety_boundaries
+  skills:
+    owns:
+      - public MaaS Web dashboard/API retrieval
+      - chart artifact generation
+      - JSON and Markdown status summaries

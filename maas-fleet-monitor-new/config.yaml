@@ -1,0 +1,10 @@
+name: maas-fleet-monitor-new
+description: MaaS Fleet Monitor New, a Web-only read-only MaaS monitoring Agent Bundle for Allo desktop and server runtimes.
+type: agentic
+dashboard: full
+workspace_type: dashboard
+access: org
+model: deepseek-v4-pro
+thinking_enabled: true
+tool_groups: null
+observation_store: true
