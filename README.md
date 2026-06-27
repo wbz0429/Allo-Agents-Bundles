@@ -37,6 +37,10 @@ Each direct child directory is one Agent Bundle:
 > [PROTOCOL-v2.md](PROTOCOL-v2.md) for the v1↔v2 comparison and the loading model.
 > `xingyuan-monitor` in this PR is migrated to v2.
 
+> **Feishu:** to make a bundle talk to Feishu, you only declare the card title +
+> fields and output `标签：值` text — the platform owns the connection, credentials,
+> and card rendering. Read [FEISHU_SKILL_GUIDE.md](FEISHU_SKILL_GUIDE.md) (接手必读).
+
 ## Access Fields
 
 Bundles may declare lightweight visibility policy in `config.yaml`:
